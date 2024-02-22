@@ -29,7 +29,7 @@ def make_game_library_from_json( json_data ):
 
 #Part 2
 input_json_file = "data/test_data.json"
-
+ 
 ### Begin Add Code Here ###
 with open(input_json_file, "r") as reader:
     #load the JSON data and store it in the variable game_json_data

@@ -4,7 +4,7 @@ import json
 
 #Part 3
 #Load your custom JSON file
-input_json_file = "data/elugo_cc_level_pack.json"
+input_json_file = "data/elugo_cc_level_pack(5).json"
 
 
 #Convert JSON data to CCLevelPack
@@ -12,10 +12,12 @@ input_json_file = "data/elugo_cc_level_pack.json"
 def convert_json_to_CCLevelPack(json_data):
     level_pack = CCLevelPack()
 
+    level_number = 1
     levels_data = json_data['levels'] 
     for i, level_json in enumerate(levels_data):
         level = CCLevel() 
-        level.level_number = i #level_json['level_num']
+        level.level_number = 1 #level_json['level_num']
+        level_number += i
         level.time = level_json['time']
         level.num_chips = level_json["numberOfChips"]
         password_str = level_json['password']
